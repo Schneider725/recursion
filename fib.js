@@ -6,10 +6,12 @@ function fib(num, memo = {}) {
         return 1;
     }
 
-    return memo[num] = fib(num - 1) + fib(num - 2)
+    console.log('this was printed recursively')
+
+    return memo[num] = fib(num - 1, memo) + fib(num - 2,memo)
 
 }
 
-const fibo = fib(6)
+// const fibo = fib(6)
 
-console.log(fibo)
+console.log(fib(6))
